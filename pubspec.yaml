@@ -16,7 +16,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.7
-  google_fonts: ^4.0.4
+  google_fonts: ^8.1.0
   flutter_screenutil: ^5.5.4
   equatable: ^2.0.5
   font_awesome_flutter: ^10.2.1
@@ -38,13 +38,13 @@ dependencies:
   dartz: ^0.10.1
   #loading_animation_widget: ^1.2.0+4
   flutter_timer_countdown: ^1.0.7
-  http: ^0.13.0
+  http: ^1.0.0
   webview_flutter: ^4.2.2
   #webview_flutter_web: ^0.2.2+4
   file_picker: ^10.1.2
   flutter_rating_bar: ^4.0.1
   connectivity_plus: ^6.0.5
-  translator: ^0.1.7
+  translator: ^1.0.4+1
   html: ^0.15.4
   permission_handler: ^11.0.1
   path_provider: ^2.1.1
