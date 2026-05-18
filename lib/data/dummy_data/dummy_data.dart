@@ -55,7 +55,7 @@ final List<String> catTitles = [
 const String offerText =
     'شوف أجدد العروض والكوبونات بأحسن الأسعار';
 
-const String offerText2 = 'Sell your Products with Our Digital Marketplace';
+const String offerText2 = 'اعرض خدماتك ومنتجاتك الرقمية بسهولة على منصتنا';
 
 String description =
     "A great way to start is by browsing through our categories to see what other authors are selling.";

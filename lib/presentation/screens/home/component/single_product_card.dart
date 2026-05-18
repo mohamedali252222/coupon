@@ -148,7 +148,7 @@ class SingleProductCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       _sellCount(FontAwesomeIcons.download,
-                          ' ${theme.totalSold} Sell'),
+                          ' ${theme.totalSold} عملية بيع'),
                       //_sellCount(FontAwesomeIcons.heart, '120'),
                       // Utils.hSpace(40.0),
                     ],

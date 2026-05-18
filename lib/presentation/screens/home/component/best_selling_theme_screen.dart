@@ -82,7 +82,7 @@ class LoadedBestSellingProduct extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'أكتر العروض مبيعًا',
+          title: 'أكثر العروض مبيعًا',
           isGradientBg: true,
           iconColor: whiteColor,
         ),

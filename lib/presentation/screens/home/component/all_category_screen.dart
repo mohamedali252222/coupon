@@ -21,7 +21,7 @@ class AllCategoryScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           const CustomSliverAppBar(
-            title: 'All Category',
+            title: 'كل الأقسام',
             iconColor: whiteColor,
             isGradientBg: true,
           ),

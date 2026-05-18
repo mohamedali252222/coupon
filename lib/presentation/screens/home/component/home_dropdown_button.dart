@@ -90,7 +90,7 @@ class _HomeDropdownButtonState extends State<HomeDropdownButton> {
               Expanded(
                 child: DropdownButtonFormField<CurrenciesModel>(
                     value: currency,
-                    hint: const Text('Currencies'),
+                    hint: const Text('العملة'),
                     padding: EdgeInsets.zero,
                     icon: const Icon(Icons.keyboard_arrow_down),
                     decoration: const InputDecoration(
@@ -130,7 +130,7 @@ class _HomeDropdownButtonState extends State<HomeDropdownButton> {
                   value: language,
                   dropdownColor: whiteColor,
                   hint: const CustomText(
-                    text: "Language",
+                    text: "اللغة",
                     color: blackColor,
                     fontSize: 16.0,
                   ),

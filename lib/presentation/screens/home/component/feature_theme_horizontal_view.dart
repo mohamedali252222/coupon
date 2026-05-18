@@ -9,7 +9,7 @@ import 'single_product_card.dart';
 
 class FeatureThemeHorizontalView extends StatelessWidget {
   const FeatureThemeHorizontalView(
-      {super.key, this.title = 'Best Selling Theme', this.onTap});
+      {super.key, this.title = 'أكثر العروض مبيعًا', this.onTap});
 
   final String title;
   final VoidCallback? onTap;

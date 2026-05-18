@@ -25,7 +25,7 @@ class TrendingHorizontalProduct extends StatelessWidget {
     return Column(
       children: [
         Heading(
-            title1: 'Trending Theme',
+            title1: 'عروض ترند',
             onTap: () =>
                 Navigator.pushNamed(context, RouteNames.trendingScreen)),
         itemSpace,

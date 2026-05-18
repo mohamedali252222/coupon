@@ -23,7 +23,7 @@ class DashboardScreen extends StatelessWidget {
             backgroundColor: scaffoldBgColor,
             automaticallyImplyLeading: false,
             title: CustomText(
-              text: 'Dashboard',
+              text: 'لوحة التحكم',
               fontWeight: FontWeight.w500,
               fontSize: 20.0,
               color: blackColor,
@@ -54,7 +54,7 @@ class DashboardScreen extends StatelessWidget {
                     ),
                     Utils.horizontalSpace(10.0),
                     const CustomText(
-                      text: 'Upload Your Product',
+                      text: 'ضيف عرض جديد',
                       fontWeight: FontWeight.w500,
                       fontSize: 16.0,
                       color: whiteColor,
@@ -73,19 +73,19 @@ class DashboardScreen extends StatelessWidget {
                 DashboardItem(
                   onTap: () =>
                       Navigator.pushNamed(context, RouteNames.overviewScreen),
-                  title: 'Overview',
+                  title: 'نظرة عامة',
                   icon: KImages.description,
                 ),
                 DashboardItem(
                   onTap: () =>
                       Navigator.pushNamed(context, RouteNames.portfolioScreen),
-                  title: 'Portfolio',
+                  title: 'عروضي',
                   icon: KImages.dashboardIcon02,
                 ),
                 DashboardItem(
                   onTap: () => Navigator.pushNamed(
                       context, RouteNames.downloadedFileScreen),
-                  title: 'Downloaded File',
+                  title: 'كوبوناتي',
                   icon: KImages.dashboardIcon03,
                 ),
                 DashboardItem(
@@ -95,13 +95,13 @@ class DashboardScreen extends StatelessWidget {
                     final controller = MainController();
                     controller.naveListener.add(1);
                   },
-                  title: 'Collections',
+                  title: 'قوائم محفوظة',
                   icon: KImages.dashboardIcon04,
                 ),
                 DashboardItem(
                   onTap: () =>
                       Navigator.pushNamed(context, RouteNames.withdrawScreen),
-                  title: 'Withdraws',
+                  title: 'سحوبات الأرباح',
                   icon: KImages.dashboardIcon05,
                 ),
               ]),

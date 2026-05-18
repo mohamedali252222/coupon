@@ -72,7 +72,7 @@ class _SpecialOfferScreenState extends State<SpecialOfferScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const CustomText(
-          text: 'Special Offer',
+          text: 'العروض المميزة',
           color: blackColor,
           fontSize: 20.0,
         ),
@@ -98,7 +98,7 @@ class _SpecialOfferScreenState extends State<SpecialOfferScreen> {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'Special Offer',
+          title: 'العروض المميزة',
           iconColor: whiteColor,
           isGradientBg: true,
         ),

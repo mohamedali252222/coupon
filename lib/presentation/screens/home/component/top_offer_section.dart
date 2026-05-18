@@ -55,7 +55,7 @@ class TopOfferSection extends StatelessWidget {
                         child: const Icon(Icons.search,
                             color: blueGrayColor, size: 24.0)),
                     Utils.horizontalSpace(10.0),
-                    const CustomText(text: 'search your product..',fontSize: 12,),
+                    const CustomText(text: 'ابحث عن عرض أو كوبون..',fontSize: 12,),
                   ],
                 ),
               ),
@@ -82,7 +82,7 @@ class TopOfferSection extends StatelessWidget {
       enabled: false,
       onTap: () => Navigator.pushNamed(context, RouteNames.searchScreen),
       decoration: InputDecoration(
-        hintText: 'search your product..',
+        hintText: 'ابحث عن عرض أو كوبون..',
         prefixIcon: const Icon(Icons.search, color: blueGrayColor, size: 28.0),
         suffixIcon: GestureDetector(
           onTap: () {
@@ -103,7 +103,7 @@ class TopOfferSection extends StatelessWidget {
                   borderRadius: Utils.borderRadius(r: 6.0)),
             ),
             child: const CustomText(
-              text: 'Search',
+              text: 'بحث',
               color: whiteColor,
               fontWeight: FontWeight.w600,
               fontSize: 16.0,

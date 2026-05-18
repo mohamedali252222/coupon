@@ -8,7 +8,7 @@ class Heading extends StatelessWidget {
   const Heading({
     Key? key,
     required this.title1,
-    this.title2 = 'See All',
+    this.title2 = 'شوف الكل',
     this.onTap,
     this.seeAllVisible = true,
     this.padding = 0.0,

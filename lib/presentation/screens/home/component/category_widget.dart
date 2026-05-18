@@ -18,7 +18,7 @@ class CategoryWidget extends StatelessWidget {
     return Column(
       children: [
         Heading(
-          title1: 'Categories',
+          title1: 'أقسام العروض',
           onTap: () =>
               Navigator.pushNamed(context, RouteNames.allCategoryScreen),
         ),

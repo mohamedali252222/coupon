@@ -38,7 +38,7 @@ class ProfileScreen extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, RouteNames.allCategoryScreen);
               },
-              title: 'All Category',
+              title: 'كل الأقسام',
               icon: KImages.profileIcon01,
             ),
             // ProfileItem(
@@ -55,41 +55,41 @@ class ProfileScreen extends StatelessWidget {
             ProfileItem(
               onTap: () =>
                   Navigator.pushNamed(context, RouteNames.changePasswordScreen),
-              title: 'Change Password',
+              title: 'تغيير كلمة المرور',
               icon: KImages.profileIcon06,
             ),
             ProfileItem(
               onTap: () => Navigator.pushNamed(
                   context, RouteNames.termsAndConditionScreen),
-              title: 'Teams and Condition',
+              title: 'الشروط والأحكام',
               icon: KImages.profileIcon04,
             ),
             ProfileItem(
               onTap: () =>
                   Navigator.pushNamed(context, RouteNames.privacyPolicyScreen),
-              title: 'Privacy Policy',
+              title: 'سياسة الخصوصية',
               icon: KImages.profileIcon05,
             ),
             ProfileItem(
               onTap: () => Navigator.pushNamed(context, RouteNames.faqScreen),
-              title: 'FAQ',
+              title: 'الأسئلة الشائعة',
               icon: KImages.profileIcon07,
             ),
             ProfileItem(
               onTap: () =>
                   Navigator.pushNamed(context, RouteNames.aboutUsScreen),
-              title: 'About Us',
+              title: 'عن التطبيق',
               icon: KImages.profileIcon08,
             ),
             ProfileItem(
               onTap: () =>
                   Navigator.pushNamed(context, RouteNames.contactUsScreen),
-              title: 'Contact Us',
+              title: 'اتصل بنا',
               icon: KImages.profileIcon09,
             ),
             ProfileItem(
               onTap: () {},
-              title: 'App Info',
+              title: 'معلومات التطبيق',
               icon: KImages.profileIcon10,
               isVersion: true,
             ),
@@ -101,7 +101,7 @@ class ProfileScreen extends StatelessWidget {
                   builder: (context) => const LogoutDialog(),
                 );
               },
-              title: 'Sign Out',
+              title: 'تسجيل خروج',
               icon: KImages.profileIcon11,
               isUnderline: false,
             ),
@@ -137,11 +137,11 @@ class LogoutDialog extends StatelessWidget {
       },
       child: FeedBackDialog(
         image: KImages.deleteIcon,
-        message: 'Are you sure',
+        message: 'متأكد؟',
         child: Column(
           children: [
             const CustomText(
-              text: 'You want to Logout?',
+              text: 'عايز تسجّل خروج؟',
               fontSize: 16.0,
               fontWeight: FontWeight.w600,
               color: grayColor,
@@ -151,14 +151,14 @@ class LogoutDialog extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ActionButton(
-                  title: 'Yes',
+                  title: 'نعم',
                   onTap: () => loginBloc.add(const LoginEventLogout()),
                   color: blackColor,
                   textColor: whiteColor,
                 ),
                 Utils.horizontalSpace(18.0),
                 ActionButton(
-                  title: 'Cancel',
+                  title: 'إلغاء',
                   onTap: () => Navigator.of(context).pop(),
                   color: primaryColor,
                   textColor: whiteColor,
@@ -237,14 +237,14 @@ class _ProfileAppBarState extends State<ProfileAppBar> {
                     GestureDetector(
                       onTap: () {
                         if (loginBloc.userInformation == null) {
-                          Utils.showSnackBar(context, 'Login first');
+                          Utils.showSnackBar(context, 'سجّل الدخول أولاً');
                         } else {
                           if (profileCubit.userModel != null) {
                             Navigator.pushNamed(
                                 context, RouteNames.updateProfileScreen,
                                 arguments: profileCubit.userModel!);
                           } else {
-                            Utils.showSnackBar(context, 'Your session expired');
+                            Utils.showSnackBar(context, 'جلستك انتهت، سجّل الدخول من جديد');
                           }
                         }
                       },

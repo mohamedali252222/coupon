@@ -96,7 +96,7 @@ class LoadedWishlistItem extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       slivers: [
         const CustomSliverAppBar(
-          title: 'Wishlist',
+          title: 'المفضلة',
           isShowBackButton: false,
           // isShowBackButton: isVisibleBackButton ? true : false,
         ),
@@ -112,7 +112,7 @@ class LoadedWishlistItem extends StatelessWidget {
                   },
                 ),
               )
-            : EmptyWidget(icon: KImages.emptyWishlist, text: 'No item found!'),
+            : EmptyWidget(icon: KImages.emptyWishlist, text: 'مفيش عناصر في المفضلة'),
       ],
     );
   }

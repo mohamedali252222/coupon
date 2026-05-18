@@ -85,7 +85,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                     GestureDetector(
                       onTap: () {
                         if (loginBloc.userInformation == null) {
-                          Utils.showSnackBar(context, 'Login first');
+                          Utils.showSnackBar(context, 'سجّل الدخول أولاً');
                         } else {
                           if (profileCubit.userModel != null) {
                             Navigator.pushNamed(
@@ -93,7 +93,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                                 arguments: profileCubit.userModel!);
                           } else {
 
-                            Utils.showSnackBar(context, 'Your session expired');
+                            Utils.showSnackBar(context, 'جلستك انتهت، سجّل الدخول من جديد');
                           }
                         }
                       },
@@ -171,7 +171,7 @@ class _CurrenciesWidgetState extends State<CurrenciesWidget> {
             Flexible(
               child: DropdownButtonFormField<CurrenciesModel>(
                   value: _demoModel,
-                  hint: const Text('Currencies'),
+                  hint: const Text('العملة'),
                   padding: EdgeInsets.zero,
                   icon: const Icon(Icons.keyboard_arrow_down),
                   decoration: const InputDecoration(

@@ -10,7 +10,7 @@ import 'single_product_card.dart';
 class BestSellThemeHorizontalView extends StatelessWidget {
   const BestSellThemeHorizontalView({
     super.key,
-    this.title = 'Best Selling Theme',
+    this.title = 'أكثر العروض مبيعًا',
     this.onTap,
   });
 
