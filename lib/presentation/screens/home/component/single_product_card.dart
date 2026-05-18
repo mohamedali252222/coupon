@@ -2,7 +2,7 @@ import 'package:alas_mart/logic/cubit/currency/currency_cubit.dart';
 import 'package:alas_mart/logic/cubit/currency/currency_state_model.dart';
 import 'package:alas_mart/state_packages_name.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 import '../../../../data/data_provider/remote_url.dart';
 import '../../../../data/models/details/product_item_model.dart';
@@ -147,7 +147,7 @@ class SingleProductCard extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      _sellCount(FontAwesomeIcons.download,
+                      _sellCount(Icons.download,
                           ' ${theme.totalSold} عملية بيع'),
                       //_sellCount(FontAwesomeIcons.heart, '120'),
                       // Utils.hSpace(40.0),

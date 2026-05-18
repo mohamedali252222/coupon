@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../data/data_provider/remote_url.dart';
 import '../../../../data/models/details/product_item_model.dart';
@@ -228,7 +227,7 @@ class SliverGridViewComponent extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      _sellCount(FontAwesomeIcons.download,
+                      _sellCount(Icons.download,
                           ' ${theme.totalSold} عملية شراء'),
                       //_sellCount(FontAwesomeIcons.heart, '120'),
                       // Utils.hSpace(40.0),

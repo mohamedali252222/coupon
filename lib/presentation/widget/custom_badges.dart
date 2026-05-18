@@ -1,6 +1,5 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../utils/constraints.dart';
 import '../utils/utils.dart';
@@ -39,7 +38,7 @@ class CustomBadges extends StatelessWidget {
           fontWeight: FontWeight.w700,
         ),
       ),
-      child: FaIcon(
+      child: Icon(
         icon,
         color: iconColor,
         size: 30.0,

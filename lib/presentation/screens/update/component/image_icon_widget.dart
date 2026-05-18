@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../data/data_provider/remote_url.dart';
 import '../../../../data/models/edit/edit_product_model.dart';
@@ -73,8 +72,8 @@ class UpdateImageIconWidget extends StatelessWidget {
                             child: const CircleAvatar(
                               minRadius: 18.0,
                               backgroundColor: whiteColor,
-                              child: FaIcon(
-                                FontAwesomeIcons.penToSquare,
+                              child: Icon(
+                                Icons.edit,
                                 color: blackColor,
                                 size: 20.0,
                               ),
@@ -123,8 +122,8 @@ class UpdateImageIconWidget extends StatelessWidget {
                             child: const CircleAvatar(
                               minRadius: 18.0,
                               backgroundColor: whiteColor,
-                              child: FaIcon(
-                                FontAwesomeIcons.penToSquare,
+                              child: Icon(
+                                Icons.edit,
                                 color: blackColor,
                                 size: 20.0,
                               ),

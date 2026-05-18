@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../utils/constraints.dart';
 import '../../../utils/utils.dart';
@@ -34,7 +33,7 @@ class PriceSection extends StatelessWidget {
           ),
           Row(
             children: [
-              _sellCount(FontAwesomeIcons.download, ' $totalSale Sell'),
+              _sellCount(Icons.download, ' $totalSale Sell'),
               // Utils.hSpace(40.0),
             ],
           ),

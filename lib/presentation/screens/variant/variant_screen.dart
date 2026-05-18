@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../data/models/details/variant/variant_model.dart';
 import '../../../data/models/edit/edit_product_model.dart';
@@ -111,7 +110,7 @@ class VariantCard extends StatelessWidget {
               VariantActionButton(
                 onTap: () => updateVariant(context, variant),
                 bgColor: const Color(0xFF3BB557),
-                icon: FontAwesomeIcons.penToSquare,
+                icon: Icons.edit,
               ),
               VariantActionButton(
                 onTap: () => showDialog(
