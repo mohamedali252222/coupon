@@ -123,7 +123,7 @@ class LoadedHomeWidget extends StatelessWidget {
               // sectionSpace,
               Utils.verticalSpace(30.0),
               const OfferWidget(
-                  headingText: offerText, buttonText: 'Go to Offer Page'),
+                  headingText: offerText, buttonText: 'شوف العروض'),
               sectionSpace,
               const TrendingHorizontalProduct(),
               // sectionSpace,
@@ -131,7 +131,7 @@ class LoadedHomeWidget extends StatelessWidget {
               //sectionSpace,
               Utils.verticalSpace(15.0),
               FeatureThemeHorizontalView(
-                  title: 'Feature Themes',
+                  title: 'عروض مميزة',
                   onTap: () => Navigator.pushNamed(
                       context, RouteNames.bestSellingThemeScreen)),
               sectionSpace,

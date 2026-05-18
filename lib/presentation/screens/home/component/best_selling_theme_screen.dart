@@ -82,7 +82,7 @@ class LoadedBestSellingProduct extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'Best Selling Theme',
+          title: 'أكتر العروض مبيعًا',
           isGradientBg: true,
           iconColor: whiteColor,
         ),
@@ -229,7 +229,7 @@ class SliverGridViewComponent extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       _sellCount(FontAwesomeIcons.download,
-                          ' ${theme.totalSold} Sell'),
+                          ' ${theme.totalSold} عملية شراء'),
                       //_sellCount(FontAwesomeIcons.heart, '120'),
                       // Utils.hSpace(40.0),
                     ],

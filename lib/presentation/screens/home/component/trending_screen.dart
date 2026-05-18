@@ -35,7 +35,7 @@ class _TrendingScreenState extends State<TrendingScreen> {
           //   child: _trendingItem(),
           // ),
           const CustomSliverAppBar(
-            title: 'Trending Themes',
+            title: 'العروض المشهورة',
             iconColor: whiteColor,
             isGradientBg: true,
           ),
@@ -98,4 +98,4 @@ class _TrendingScreenState extends State<TrendingScreen> {
   }
 }
 
-List<String> trendingItem = ['Popular', 'Trending', 'New Items'];
+List<String> trendingItem = ['الأكتر شعبية', 'الرائجة', 'أجدد العروض'];

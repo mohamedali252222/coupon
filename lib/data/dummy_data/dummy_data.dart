@@ -53,7 +53,7 @@ final List<String> catTitles = [
 ];
 
 const String offerText =
-    'Check our software Megapack worth \$565 for Only \$39.';
+    'شوف أجدد العروض والكوبونات بأحسن الأسعار';
 
 const String offerText2 = 'Sell your Products with Our Digital Marketplace';
 
