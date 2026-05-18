@@ -100,7 +100,7 @@ class _CartLoadedWidgetState extends State<CartLoadedWidget> {
             Padding(
               padding: Utils.symmetric(v: 50.0).copyWith(bottom: 10.0),
               child: const CustomAppBar(
-                title: 'Cart Product',
+                title: 'سلة العروض',
                 isGradientBg: true,
                 iconColor: whiteColor,
               ),
@@ -149,7 +149,7 @@ class _CartLoadedWidgetState extends State<CartLoadedWidget> {
       return Center(
         child: EmptyWidget(
           icon: KImages.emptyWishlist,
-          text: 'No cart item found!',
+          text: 'السلة فاضية مافيهاش عروض',
           isSliver: false,
         ),
       );

@@ -70,7 +70,7 @@ class LoadedDownloadWidget extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'Downloaded File',
+          title: 'كوبوناتي',
           iconColor: whiteColor,
           isGradientBg: true,
         ),
@@ -89,7 +89,7 @@ class LoadedDownloadWidget extends StatelessWidget {
         ] else ...[
           EmptyWidget(
             icon: KImages.emptyDownload,
-            text: 'Your Download is Empty',
+            text: 'لسه ما عندكش كوبونات',
           ),
         ]
       ],

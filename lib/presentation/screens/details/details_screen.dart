@@ -119,7 +119,7 @@ class LoadedDetailsComponent extends StatelessWidget {
       physics: const ClampingScrollPhysics(),
       slivers: [
         const CustomSliverAppBar(
-          title: 'Product Details',
+          title: 'تفاصيل العرض',
           iconColor: whiteColor,
           isGradientBg: true,
         ),
