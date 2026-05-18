@@ -66,7 +66,7 @@ class LoadedPrivacyPolicyText extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'Terms and Condition',
+          title: 'الشروط والأحكام',
           isGradientBg: true,
           iconColor: whiteColor,
         ),

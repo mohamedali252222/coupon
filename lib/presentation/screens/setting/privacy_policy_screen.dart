@@ -65,7 +65,7 @@ class LoadedPrivacyPolicyText extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'Privacy Policy',
+          title: 'سياسة الخصوصية',
           isGradientBg: true,
           iconColor: whiteColor,
         ),

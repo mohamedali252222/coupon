@@ -24,7 +24,7 @@ class SignUpForm extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         CustomFormWidget(
-          label: 'Username',
+          label: 'اسم المستخدم',
           bottomSpace: 14.0,
           child: BlocBuilder<SignUpBloc, SignUpStateModel>(
             builder: (context, state) {
@@ -34,7 +34,7 @@ class SignUpForm extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: const InputDecoration(
-                      hintText: 'username',
+                      hintText: 'اسم المستخدم',
                     ),
                     initialValue: state.name,
                     keyboardType: TextInputType.name,
@@ -51,7 +51,7 @@ class SignUpForm extends StatelessWidget {
           ),
         ),
         CustomFormWidget(
-          label: 'Email Address',
+          label: 'البريد الإلكتروني',
           bottomSpace: 20.0,
           child: BlocBuilder<SignUpBloc, SignUpStateModel>(
             builder: (context, state) {
@@ -61,7 +61,7 @@ class SignUpForm extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: const InputDecoration(
-                      hintText: 'email address',
+                      hintText: 'البريد الإلكتروني',
                     ),
                     initialValue: state.email,
                     onChanged: (String email) =>
@@ -79,7 +79,7 @@ class SignUpForm extends StatelessWidget {
           ),
         ),
         CustomFormWidget(
-          label: 'Password',
+          label: 'كلمة المرور',
           bottomSpace: 14.0,
           child: BlocBuilder<SignUpBloc, SignUpStateModel>(
             builder: (context, state) {
@@ -89,7 +89,7 @@ class SignUpForm extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                      hintText: 'Password',
+                      hintText: 'كلمة المرور',
                       suffixIcon: IconButton(
                         onPressed: () => signUpBloc
                             .add(SignUpEventShowPassword(state.showPassword)),
@@ -117,7 +117,7 @@ class SignUpForm extends StatelessWidget {
           ),
         ),
         CustomFormWidget(
-          label: 'Confirm Password',
+          label: 'تأكيد كلمة المرور',
           bottomSpace: 12.0,
           child: BlocBuilder<SignUpBloc, SignUpStateModel>(
             builder: (context, state) {
@@ -127,7 +127,7 @@ class SignUpForm extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                      hintText: 'Confirm Password',
+                      hintText: 'تأكيد كلمة المرور',
                       suffixIcon: IconButton(
                         onPressed: () => signUpBloc.add(
                             SignUpEventShowConfirmPassword(
@@ -165,7 +165,7 @@ class SignUpForm extends StatelessWidget {
               return const LoadingWidget();
             }
             return PrimaryButton(
-              text: 'Sign up',
+              text: 'إنشاء حساب',
               onPressed: () {
                 Utils.closeKeyBoard(context);
                 signUpBloc.add(const SignUpEventSubmit());

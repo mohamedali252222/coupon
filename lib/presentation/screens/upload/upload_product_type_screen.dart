@@ -25,26 +25,26 @@ class UploadProductTypeScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           const CustomSliverAppBar(
-              title: 'Product Type', isGradientBg: true, iconColor: whiteColor),
+              title: 'نوع العرض', isGradientBg: true, iconColor: whiteColor),
           SliverPadding(
             padding: Utils.symmetric(),
             sliver: SliverList(
                 delegate: SliverChildListDelegate([
               const CustomText(
-                  text: 'Product Upload',
+                  text: 'رفع عرض',
                   fontSize: 20.0,
                   fontWeight: FontWeight.w700,
                   color: blackColor),
               Utils.verticalSpace(5.0),
               const CustomText(
-                text: 'Select a category for your Product',
+                text: 'اختار القسم المناسب لعرضك',
                 fontSize: 16.0,
                 color: primaryColor,
               ),
               Utils.verticalSpace(15.0),
               DropdownButtonFormField<ProductType>(
                 hint: const CustomText(
-                  text: 'Select Product Type',
+                  text: 'اختار نوع العرض',
                   fontSize: 14.0,
                   fontWeight: FontWeight.w500,
                   color: blueGrayColor,
@@ -78,7 +78,7 @@ class UploadProductTypeScreen extends StatelessWidget {
               // CustomImage(path: RemoteUrls.imageUrl(productType.image)),
               Utils.verticalSpace(30.0),
               const CustomText(
-                  text: 'Need help selecting a category?',
+                  text: 'محتاج مساعدة في اختيار القسم؟',
                   fontSize: 18.0,
                   fontWeight: FontWeight.w600,
                   color: blackColor),
@@ -91,7 +91,7 @@ class UploadProductTypeScreen extends StatelessWidget {
               ),
               Utils.verticalSpace(30.0),
               PrimaryButton(
-                text: 'Next',
+                text: 'التالي',
                 onPressed: () {
                   if (uploadBloc.state.productType.isNotEmpty) {
                     Navigator.pushNamed(
@@ -99,7 +99,7 @@ class UploadProductTypeScreen extends StatelessWidget {
                       RouteNames.uploadScreen,
                     );
                   } else {
-                    Utils.showSnackBar(context, 'Please select product type');
+                    Utils.showSnackBar(context, 'من فضلك اختار نوع العرض');
                   }
                 },
               ),

@@ -81,7 +81,7 @@ class _ContactUsLoadedWidgetState extends State<ContactUsLoadedWidget> {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'Contact us',
+          title: 'اتصل بنا',
           iconColor: whiteColor,
           isGradientBg: true,
         ),
@@ -97,12 +97,12 @@ class _ContactUsLoadedWidgetState extends State<ContactUsLoadedWidget> {
                 children: [
                   ContactInfo(
                     icon: Icons.email_outlined,
-                    title: 'Mail Address',
+                    title: 'البريد الإلكتروني',
                     subTitle: widget.contact.email,
                   ),
                   ContactInfo(
                     icon: Icons.phone,
-                    title: 'Phone Number',
+                    title: 'رقم الهاتف',
                     subTitle: widget.contact.phone,
                   ),
                 ],
@@ -115,7 +115,7 @@ class _ContactUsLoadedWidgetState extends State<ContactUsLoadedWidget> {
                   children: [
                     ContactInfo2(
                       icon: Icons.location_on,
-                      title: 'Contact Address',
+                      title: 'العنوان',
                       subTitle: widget.contact.address,
                     ),
 

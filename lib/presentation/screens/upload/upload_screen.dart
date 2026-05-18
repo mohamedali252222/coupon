@@ -59,14 +59,14 @@ class UploadScreen extends StatelessWidget {
         child: CustomAuthenticationWidget(
           height: size.height * 0.16,
           isShowBackButton: false,
-          topChild: const UploadProductAppBar(title: 'Upload Product'),
+          topChild: const UploadProductAppBar(title: 'رفع عرض جديد'),
           child: const UploadForm(),
         ),
       ),
       bottomNavigationBar: Container(
         padding: Utils.symmetric(v: 20.0),
         child: PrimaryButton(
-            text: 'Upload Product',
+            text: 'رفع العرض',
             onPressed: () {
               Utils.closeDialog(context);
               uploadBloc

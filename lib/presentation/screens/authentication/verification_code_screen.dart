@@ -96,7 +96,7 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const CustomText(
-                text: 'Verification Code',
+                text: 'كود التحقق',
                 fontSize: 30.0,
                 color: blackColor,
                 fontWeight: FontWeight.bold,
@@ -180,12 +180,12 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const CustomText(
-              text: 'Don\'t get verification code', fontSize: 14.0),
+              text: 'لم يصلك الكود؟', fontSize: 14.0),
           GestureDetector(
             onTap: () =>
                 signUpBloc.add(const SignUpEventResendVerificationSubmit()),
             child: const CustomText(
-              text: 'Resend Code',
+              text: 'إعادة الإرسال',
               fontSize: 16.0,
               fontWeight: FontWeight.w500,
               color: greenColor,

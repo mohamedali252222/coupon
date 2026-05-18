@@ -57,7 +57,7 @@ class LoadedFaqContent extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'F A Q',
+          title: 'الأسئلة الشائعة',
           isGradientBg: true,
           iconColor: whiteColor,
         ),

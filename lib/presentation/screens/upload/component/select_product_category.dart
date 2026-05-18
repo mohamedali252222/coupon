@@ -29,11 +29,11 @@ class SelectProductCategory extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomFormWidget(
-              label: 'Select Product Category',
+              label: 'اختار قسم العرض',
               bottomSpace: 16.0,
               child: DropdownButtonFormField<SingleCategoryModel>(
                 hint: const CustomText(
-                  text: 'Select Product Type',
+                  text: 'اختار نوع العرض',
                   fontSize: 14.0,
                   fontWeight: FontWeight.w500,
                   color: blueGrayColor,

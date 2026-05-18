@@ -36,18 +36,18 @@ class AddProductVariantDialog extends StatelessWidget {
       },
       child: FeedBackDialog(
         image: KImages.deleteIcon,
-        message: 'Are you sure',
+        message: 'متأكد؟',
         child: Column(
           children: [
             const CustomText(
-              text: 'You want to Delete?',
+              text: 'عايز تحذف؟',
               fontSize: 16.0,
               fontWeight: FontWeight.w600,
               color: grayColor,
             ),
             Utils.verticalSpace(20.0),
             ActionButton(
-              title: 'Yes',
+              title: 'نعم',
               onTap: () =>
                   Navigator.popAndPushNamed(context, RouteNames.variantScreen),
               color: blackColor,

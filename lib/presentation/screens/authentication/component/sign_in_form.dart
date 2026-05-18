@@ -24,7 +24,7 @@ class SignInForm extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         CustomFormWidget(
-          label: 'Username or email',
+          label: 'اسم المستخدم أو البريد',
           bottomSpace: 20.0,
           child: BlocBuilder<LoginBloc, LoginStateModel>(
             builder: (context, state) {
@@ -34,7 +34,7 @@ class SignInForm extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: const InputDecoration(
-                      hintText: 'username or email',
+                      hintText: 'اسم المستخدم أو البريد',
                     ),
                     initialValue: state.email,
                     onChanged: (String email) =>
@@ -51,7 +51,7 @@ class SignInForm extends StatelessWidget {
           ),
         ),
         CustomFormWidget(
-          label: 'Password',
+          label: 'كلمة المرور',
           bottomSpace: 14.0,
           child: BlocBuilder<LoginBloc, LoginStateModel>(
             builder: (context, state) {
@@ -61,7 +61,7 @@ class SignInForm extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                      hintText: 'Password',
+                      hintText: 'كلمة المرور',
                       suffixIcon: IconButton(
                         onPressed: () => loginBloc
                             .add(LoginEventShowPassword(state.showPassword)),
@@ -97,7 +97,7 @@ class SignInForm extends StatelessWidget {
               return const LoadingWidget();
             }
             return PrimaryButton(
-              text: 'Login',
+              text: 'تسجيل الدخول',
               onPressed: () {
                 Utils.closeKeyBoard(context);
                 loginBloc.add(const LoginEventSubmit());
@@ -121,13 +121,13 @@ class SignInForm extends StatelessWidget {
     return Column(
       children: [
         const CustomText(
-            text: 'OR', fontSize: 18.0, fontWeight: FontWeight.w700),
+            text: 'أو', fontSize: 18.0, fontWeight: FontWeight.w700),
         Utils.verticalSpace(10.0),
         GestureDetector(
           onTap: () => Navigator.pushNamedAndRemoveUntil(
               context, RouteNames.mainScreen, (route) => false),
           child: const CustomText(
-              text: 'Continue as Guest',
+              text: 'تصفح كزائر',
               color: greenColor,
               fontSize: 16.0,
               fontWeight: FontWeight.w700),
@@ -159,7 +159,7 @@ class SignInForm extends StatelessWidget {
               ),
             ),
             const CustomText(
-              text: 'Remember me',
+              text: 'تذكّرني',
               color: grayColor,
               fontSize: 14,
               height: 1.6,
@@ -170,7 +170,7 @@ class SignInForm extends StatelessWidget {
           onTap: () =>
               Navigator.pushNamed(context, RouteNames.forgotPasswordScreen),
           child: const CustomText(
-            text: 'Forgot Password',
+            text: 'نسيت كلمة المرور؟',
             color: redColor,
             height: 1.6,
             fontSize: 14,

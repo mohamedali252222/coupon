@@ -34,7 +34,7 @@ class ContactUsForm extends StatelessWidget {
       child: Column(
         children: [
           CustomFormWidget(
-            label: 'Your Name',
+            label: 'اسمك',
             bottomSpace: 16.0,
             child: BlocBuilder<ContactUsCubit, ContactUsStateModel>(
               builder: (context, state) {
@@ -43,7 +43,7 @@ class ContactUsForm extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextFormField(
-                      decoration: const InputDecoration(hintText: 'your name'),
+                      decoration: const InputDecoration(hintText: 'اسمك'),
                       keyboardType: TextInputType.name,
                       onChanged: (String name) =>
                           contactUsCubit.nameChange(name),
@@ -59,7 +59,7 @@ class ContactUsForm extends StatelessWidget {
             ),
           ),
           CustomFormWidget(
-            label: 'Email Address',
+            label: 'البريد الإلكتروني',
             bottomSpace: 16.0,
             child: BlocBuilder<ContactUsCubit, ContactUsStateModel>(
               builder: (context, state) {
@@ -68,7 +68,7 @@ class ContactUsForm extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextFormField(
-                      decoration: const InputDecoration(hintText: 'your email'),
+                      decoration: const InputDecoration(hintText: 'بريدك الإلكتروني'),
                       keyboardType: TextInputType.emailAddress,
                       onChanged: (String name) =>
                           contactUsCubit.emailChange(name),
@@ -84,7 +84,7 @@ class ContactUsForm extends StatelessWidget {
             ),
           ),
           CustomFormWidget(
-            label: 'Phone Number',
+            label: 'رقم الهاتف',
             bottomSpace: 16.0,
             child: BlocBuilder<ContactUsCubit, ContactUsStateModel>(
               builder: (context, state) {
@@ -94,7 +94,7 @@ class ContactUsForm extends StatelessWidget {
                   children: [
                     TextFormField(
                       decoration:
-                          const InputDecoration(hintText: 'phone number'),
+                          const InputDecoration(hintText: 'رقم هاتفك'),
                       keyboardType: TextInputType.phone,
                       onChanged: (String name) =>
                           contactUsCubit.phoneChange(name),
@@ -114,7 +114,7 @@ class ContactUsForm extends StatelessWidget {
             ),
           ),
           CustomFormWidget(
-            label: 'Subject',
+            label: 'الموضوع',
             bottomSpace: 16.0,
             child: BlocBuilder<ContactUsCubit, ContactUsStateModel>(
               builder: (context, state) {
@@ -123,7 +123,7 @@ class ContactUsForm extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextFormField(
-                      decoration: const InputDecoration(hintText: 'subject'),
+                      decoration: const InputDecoration(hintText: 'موضوع رسالتك'),
                       keyboardType: TextInputType.text,
                       onChanged: (String name) =>
                           contactUsCubit.subjectChange(name),
@@ -139,7 +139,7 @@ class ContactUsForm extends StatelessWidget {
             ),
           ),
           CustomFormWidget(
-            label: 'Message',
+            label: 'الرسالة',
             bottomSpace: 30.0,
             child: BlocBuilder<ContactUsCubit, ContactUsStateModel>(
               builder: (context, state) {
@@ -148,7 +148,7 @@ class ContactUsForm extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextFormField(
-                      decoration: const InputDecoration(hintText: 'message'),
+                      decoration: const InputDecoration(hintText: 'اكتب رسالتك هنا'),
                       keyboardType: TextInputType.multiline,
                       onChanged: (String name) =>
                           contactUsCubit.messageChange(name),
@@ -165,7 +165,7 @@ class ContactUsForm extends StatelessWidget {
             ),
           ),
           PrimaryButton(
-              text: 'Send Now',
+              text: 'إرسال',
               onPressed: () {
                 Utils.closeKeyBoard(context);
                 contactUsCubit.sendContactUsMessage();

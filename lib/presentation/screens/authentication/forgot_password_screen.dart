@@ -27,14 +27,14 @@ class ForgotPasswordScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomText(
-              text: 'Forgot Password',
+              text: 'نسيت كلمة المرور',
               fontSize: 30.0,
               color: blackColor,
               fontWeight: FontWeight.bold,
             ),
             Utils.verticalSpace(20.0),
             CustomFormWidget(
-              label: 'Your email address',
+              label: 'بريدك الإلكتروني',
               bottomSpace: 30.0,
               child: BlocBuilder<ForgotPasswordCubit, PasswordStateModel>(
                 builder: (context, state) {
@@ -44,7 +44,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: const InputDecoration(
-                            hintText: 'your email address'),
+                            hintText: 'بريدك الإلكتروني'),
                         keyboardType: TextInputType.emailAddress,
                         initialValue: state.email,
                         onChanged: (String text) =>
@@ -77,7 +77,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   return const LoadingWidget();
                 }
                 return PrimaryButton(
-                  text: 'Send Code',
+                  text: 'إرسال الكود',
                   onPressed: () {
                     Utils.closeKeyBoard(context);
                     passwordCubit.forgotPassWord();

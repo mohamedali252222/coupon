@@ -95,7 +95,7 @@ class _LoadedAboutUsWidgetState extends State<LoadedAboutUsWidget> {
     return CustomScrollView(
       slivers: [
         const CustomSliverAppBar(
-          title: 'About us',
+          title: 'عن التطبيق',
           iconColor: whiteColor,
           isGradientBg: true,
         ),

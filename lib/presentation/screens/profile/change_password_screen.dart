@@ -26,14 +26,14 @@ class ChangePasswordScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomText(
-              text: 'Change You Password',
+              text: 'تغيير كلمة المرور',
               fontSize: 30.0,
               color: blackColor,
               fontWeight: FontWeight.bold,
             ),
             Utils.verticalSpace(20.0),
             CustomFormWidget(
-              label: 'Current Password',
+              label: 'كلمة المرور الحالية',
               bottomSpace: 14.0,
               child: BlocBuilder<ChangePasswordCubit, ChangePasswordStateModel>(
                 builder: (context, state) {
@@ -43,7 +43,7 @@ class ChangePasswordScreen extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'Current Password',
+                          hintText: 'كلمة المرور الحالية',
                           suffixIcon: IconButton(
                             splashRadius: 25.0,
                             onPressed: passwordCubit.showPassword,
@@ -72,7 +72,7 @@ class ChangePasswordScreen extends StatelessWidget {
               ),
             ),
             CustomFormWidget(
-              label: 'New Password',
+              label: 'كلمة المرور الجديدة',
               bottomSpace: 14.0,
               child: BlocBuilder<ChangePasswordCubit, ChangePasswordStateModel>(
                 builder: (context, state) {
@@ -82,7 +82,7 @@ class ChangePasswordScreen extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'New Password',
+                          hintText: 'كلمة المرور الجديدة',
                           suffixIcon: IconButton(
                             splashRadius: 25.0,
                             onPressed: passwordCubit.showNewPassword,
@@ -111,7 +111,7 @@ class ChangePasswordScreen extends StatelessWidget {
               ),
             ),
             CustomFormWidget(
-              label: 'Confirm Password',
+              label: 'تأكيد كلمة المرور',
               child: BlocBuilder<ChangePasswordCubit, ChangePasswordStateModel>(
                 builder: (context, state) {
                   final password = state.passwordChangeState;
@@ -120,7 +120,7 @@ class ChangePasswordScreen extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'Confirm Password',
+                          hintText: 'تأكيد كلمة المرور',
                           suffixIcon: IconButton(
                             splashRadius: 25.0,
                             onPressed: passwordCubit.showConPassword,
@@ -167,7 +167,7 @@ class ChangePasswordScreen extends StatelessWidget {
                   return const LoadingWidget();
                 }
                 return PrimaryButton(
-                  text: 'Update Password',
+                  text: 'تحديث كلمة المرور',
                   onPressed: () {
                     Utils.closeKeyBoard(context);
                     passwordCubit.submitForm();

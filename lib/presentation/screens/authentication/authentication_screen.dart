@@ -95,7 +95,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
     return AnimatedContainer(
       duration: kDuration,
       child: CustomText(
-        text: _index == 0 ? 'Welcome Back!' : 'Create Account',
+        text: _index == 0 ? 'أهلاً بعودتك!' : 'إنشاء حساب',
         fontSize: 30.0,
         color: blackColor,
         fontWeight: FontWeight.bold,
@@ -139,5 +139,5 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
   }
 }
 
-List<String> tabText = const ['Login', 'Sign Up'];
+List<String> tabText = const ['تسجيل الدخول', 'حساب جديد'];
 List<Widget> forms = const [SignInForm(), SignUpForm()];

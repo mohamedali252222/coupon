@@ -37,13 +37,13 @@ class UploadForm extends StatelessWidget {
           builder: (context, state) {
             final validate = state.uploadProductState;
             return CustomFormWidget(
-              label: 'Product name',
+              label: 'اسم العرض',
               bottomSpace: 16.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(hintText: 'product name'),
+                    decoration: const InputDecoration(hintText: 'اسم العرض'),
                     keyboardType: TextInputType.text,
                     onChanged: (String value) {
                       uploadBloc.add(UploadProductNameEvent(value));
@@ -68,13 +68,13 @@ class UploadForm extends StatelessWidget {
           builder: (context, state) {
             final validate = state.uploadProductState;
             return CustomFormWidget(
-              label: 'Product slug',
+              label: 'الرابط المختصر',
               bottomSpace: 16.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(hintText: 'product slug'),
+                    decoration: const InputDecoration(hintText: 'الرابط المختصر'),
                     keyboardType: TextInputType.text,
                     onChanged: (String value) {
                       final slug = value
@@ -101,7 +101,7 @@ class UploadForm extends StatelessWidget {
               children: [
                 Expanded(
                   child: CustomFormWidget(
-                    label: 'Regular Price',
+                    label: 'السعر الأساسي',
                     bottomSpace: 16.0,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +109,7 @@ class UploadForm extends StatelessWidget {
                         TextFormField(
                           initialValue: state.regularPrice,
                           decoration:
-                              const InputDecoration(hintText: 'regular price'),
+                              const InputDecoration(hintText: 'السعر الأساسي'),
                           onChanged: (String value) => uploadBloc
                               .add(UploadProductRegularPriceEvent(value)),
                           keyboardType: TextInputType.number,
@@ -130,7 +130,7 @@ class UploadForm extends StatelessWidget {
                 isScript
                     ? Expanded(
                         child: CustomFormWidget(
-                          label: 'Extended Price',
+                          label: 'السعر الموسّع',
                           bottomSpace: 16.0,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,7 +138,7 @@ class UploadForm extends StatelessWidget {
                               TextFormField(
                                 initialValue: state.extendPrice,
                                 decoration: const InputDecoration(
-                                    hintText: 'extended price'),
+                                    hintText: 'السعر الموسّع'),
                                 onChanged: (String value) => uploadBloc
                                     .add(UploadProductExtendPriceEvent(value)),
                                 keyboardType: TextInputType.number,
@@ -165,13 +165,13 @@ class UploadForm extends StatelessWidget {
           builder: (context, state) {
             final validate = state.uploadProductState;
             return CustomFormWidget(
-              label: 'Preview Link',
+              label: 'رابط المعاينة',
               bottomSpace: 16.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(hintText: 'preview link'),
+                    decoration: const InputDecoration(hintText: 'رابط المعاينة'),
                     keyboardType: TextInputType.url,
                     onChanged: (String value) {
                       uploadBloc.add(UploadProductPreviewLinkEvent(value));
@@ -191,13 +191,13 @@ class UploadForm extends StatelessWidget {
           builder: (context, state) {
             final validate = state.uploadProductState;
             return CustomFormWidget(
-              label: 'Description',
+              label: 'الوصف',
               bottomSpace: 16.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(hintText: 'description'),
+                    decoration: const InputDecoration(hintText: 'الوصف'),
                     keyboardType: TextInputType.multiline,
                     maxLines: 4,
                     onChanged: (String value) {
@@ -218,13 +218,13 @@ class UploadForm extends StatelessWidget {
           builder: (context, state) {
             final validate = state.uploadProductState;
             return CustomFormWidget(
-              label: 'Tags',
+              label: 'الوسوم',
               bottomSpace: 16.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(hintText: 'tags'),
+                    decoration: const InputDecoration(hintText: 'الوسوم'),
                     keyboardType: TextInputType.text,
                     onChanged: (String value) {
                       uploadBloc.add(UploadProductTagsEvent(value));
@@ -243,10 +243,10 @@ class UploadForm extends StatelessWidget {
         BlocBuilder<UploadProductBloc, UploadProductStateModel>(
           builder: (context, state) {
             return CustomFormWidget(
-              label: 'Seo Title',
+              label: 'عنوان SEO',
               bottomSpace: 16.0,
               child: TextFormField(
-                decoration: const InputDecoration(hintText: 'Seo Title'),
+                decoration: const InputDecoration(hintText: 'عنوان SEO'),
                 keyboardType: TextInputType.text,
                 onChanged: (String value) {
                   uploadBloc.add(UploadProductSeoTitleEvent(value));
@@ -259,10 +259,10 @@ class UploadForm extends StatelessWidget {
         BlocBuilder<UploadProductBloc, UploadProductStateModel>(
           builder: (context, state) {
             return CustomFormWidget(
-              label: 'Seo Description',
+              label: 'وصف SEO',
               bottomSpace: 16.0,
               child: TextFormField(
-                decoration: const InputDecoration(hintText: 'Seo description'),
+                decoration: const InputDecoration(hintText: 'وصف SEO'),
                 keyboardType: TextInputType.multiline,
                 maxLines: 3,
                 onChanged: (String value) {

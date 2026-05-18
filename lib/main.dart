@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'presentation/routes/routes_name.dart';
 import 'presentation/utils/k_string.dart';
@@ -38,6 +39,16 @@ class AlasMart extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               title: KString.appName,
+              locale: const Locale('ar', 'SA'),
+              supportedLocales: const [
+                Locale('ar', 'SA'),
+                Locale('en', 'US'),
+              ],
+              localizationsDelegates: const [
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
               initialRoute: RouteNames.splashScreen,
               onGenerateRoute: RouteNames.generateRoutes,
               onUnknownRoute: (RouteSettings settings) {

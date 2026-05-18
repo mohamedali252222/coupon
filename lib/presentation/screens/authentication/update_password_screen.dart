@@ -31,14 +31,14 @@ class UpdatePasswordScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomText(
-              text: 'Update Password',
+              text: 'تحديث كلمة المرور',
               fontSize: 30.0,
               color: blackColor,
               fontWeight: FontWeight.bold,
             ),
             Utils.verticalSpace(20.0),
             CustomFormWidget(
-              label: 'New Password',
+              label: 'كلمة المرور الجديدة',
               bottomSpace: 14.0,
               child: BlocBuilder<ForgotPasswordCubit, PasswordStateModel>(
                 builder: (context, state) {
@@ -48,7 +48,7 @@ class UpdatePasswordScreen extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'New Password',
+                          hintText: 'كلمة المرور الجديدة',
                           suffixIcon: IconButton(
                             splashRadius: 25.0,
                             onPressed: passwordCubit.showPassword,
@@ -78,7 +78,7 @@ class UpdatePasswordScreen extends StatelessWidget {
               ),
             ),
             CustomFormWidget(
-              label: 'Confirm Password',
+              label: 'تأكيد كلمة المرور',
               child: BlocBuilder<ForgotPasswordCubit, PasswordStateModel>(
                 builder: (context, state) {
                   final password = state.passwordState;
@@ -87,7 +87,7 @@ class UpdatePasswordScreen extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'Confirm Password',
+                          hintText: 'تأكيد كلمة المرور',
                           suffixIcon: IconButton(
                             splashRadius: 25.0,
                             onPressed: passwordCubit.showConfirmPassword,
@@ -135,7 +135,7 @@ class UpdatePasswordScreen extends StatelessWidget {
                   return const LoadingWidget();
                 }
                 return PrimaryButton(
-                  text: 'Update Password',
+                  text: 'تحديث كلمة المرور',
                   onPressed: () {
                     Utils.closeKeyBoard(context);
                     passwordCubit.updatePassword();
@@ -159,7 +159,7 @@ class UpdatePasswordScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const CustomText(
-              text: 'Successfully Updated',
+              text: 'تم التحديث بنجاح',
               fontSize: 26.0,
               color: blackColor,
               fontWeight: FontWeight.bold,
@@ -168,21 +168,21 @@ class UpdatePasswordScreen extends StatelessWidget {
             Utils.verticalSpace(5.0),
             const CustomImage(path: KImages.successDialog),
             const CustomText(
-              text: 'Thank You',
+              text: 'شكراً لك',
               fontSize: 30.0,
               color: blackColor,
               fontWeight: FontWeight.bold,
             ),
             Utils.verticalSpace(10.0),
             const CustomText(
-              text: 'Your password has been updated',
+              text: 'تم تحديث كلمة المرور بنجاح',
               fontSize: 18.0,
               color: blackColor,
               fontWeight: FontWeight.w500,
             ),
             Utils.verticalSpace(30.0),
             PrimaryButton(
-              text: 'Back to Login',
+              text: 'الرجوع لتسجيل الدخول',
               onPressed: () {
                 Navigator.of(context).pop();
                 Navigator.pushNamedAndRemoveUntil(

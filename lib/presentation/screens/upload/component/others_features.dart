@@ -26,12 +26,12 @@ class OtherFeature extends StatelessWidget {
           children: [
             Utils.verticalSpace(10.0),
             const CustomText(
-              text: 'Other Features',
+              text: 'مميزات أخرى',
               fontSize: 14.0,
               color: primaryColor,
             ),
             OtherFeatureWidget(
-              property: 'High Resolution',
+              property: 'دقة عالية',
               child: Checkbox(
                 value: resolution == '0' ? false : true,
                 activeColor: primaryColor,
@@ -42,7 +42,7 @@ class OtherFeature extends StatelessWidget {
               ),
             ),
             OtherFeatureWidget(
-              property: 'Cross Browser',
+              property: 'متوافق مع كل المتصفحات',
               child: Checkbox(
                 value: crossBrowser == '0' ? false : true,
                 activeColor: primaryColor,
@@ -53,7 +53,7 @@ class OtherFeature extends StatelessWidget {
               ),
             ),
             OtherFeatureWidget(
-              property: 'Documentation',
+              property: 'توثيق',
               child: Checkbox(
                 value: documentation == '0' ? false : true,
                 activeColor: primaryColor,
@@ -65,7 +65,7 @@ class OtherFeature extends StatelessWidget {
               ),
             ),
             OtherFeatureWidget(
-              property: 'Responsive',
+              property: 'متجاوب',
               child: Checkbox(
                 value: responsive == '0' ? false : true,
                 activeColor: primaryColor,
