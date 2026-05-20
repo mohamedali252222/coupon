@@ -76,7 +76,7 @@ class ImageIconWidget extends StatelessWidget {
                                   const CustomImage(path: KImages.galleryIcon2),
                                   Utils.verticalSpace(10.0),
                                   const CustomText(
-                                    text: 'Choose Thumbnail',
+                                    text: 'اختار صورة مصغرة',
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
                                     color: Color(0xFF0049FF),
@@ -139,7 +139,7 @@ class ImageIconWidget extends StatelessWidget {
                                 const CustomImage(path: KImages.galleryIcon2),
                                 Utils.verticalSpace(10.0),
                                 const CustomText(
-                                  text: 'Choose Icon',
+                                  text: 'اختار أيقونة',
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w500,
                                   color: Color(0xFF0049FF),

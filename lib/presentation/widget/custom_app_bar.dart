@@ -27,12 +27,8 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment:
-          isShowBackButton ? MainAxisAlignment.start : MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        isShowBackButton
-            ? BackButtonWidget(isGradientBg: isGradientBg, iconColor: iconColor)
-            : const SizedBox(),
         Padding(
           padding: Utils.only(bottom: 5.0),
           child: CustomText(
@@ -41,7 +37,10 @@ class CustomAppBar extends StatelessWidget {
             fontWeight: fontWeight,
             color: textColor,
           ),
-        )
+        ),
+        isShowBackButton
+            ? BackButtonWidget(isGradientBg: isGradientBg, iconColor: iconColor)
+            : const SizedBox(),
       ],
     );
   }
@@ -77,8 +76,8 @@ class BackButtonWidget extends StatelessWidget {
                 border: Border.all(color: grayColor.withOpacity(0.5)),
               ),
         child: Padding(
-          padding: Utils.only(left: 8.0),
-          child: Icon(Icons.arrow_back_ios, color: iconColor),
+          padding: Utils.only(right: 8.0),
+          child: Icon(Icons.arrow_forward_ios, color: iconColor),
         ),
       ),
     );

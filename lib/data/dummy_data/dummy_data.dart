@@ -58,7 +58,7 @@ const String offerText =
 const String offerText2 = 'اعرض خدماتك ومنتجاتك الرقمية بسهولة على منصتنا';
 
 String description =
-    "A great way to start is by browsing through our categories to see what other authors are selling.";
+    "تقدر تبدأ بسهولة من خلال تصفح الأقسام وتشوف العروض اللي تناسبك.";
 
 const String term1 =
     'The User must undertake to adhere to the eligibility to enter into a contract in view of section 11 of The Indian Contract Act, 1872. The User shall agree to represent and warrant that the User is at the age of 18';
