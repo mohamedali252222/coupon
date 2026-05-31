@@ -21,6 +21,7 @@ import 'component/feature_theme_horizontal_view.dart';
 import 'component/home_app_bar.dart';
 import 'component/top_offer_section.dart';
 import 'component/trending_horizontal_product.dart';
+import 'component/offer_coupons_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -113,6 +114,7 @@ class LoadedHomeWidget extends StatelessWidget {
           delegate: SliverChildListDelegate(
             [
               TopOfferSection(introduction: homeModel.introduction!),
+              const OfferCouponsSection(),
               sectionSpace,
               CategoryWidget(categories: homeModel.category!),
               sectionSpace,
