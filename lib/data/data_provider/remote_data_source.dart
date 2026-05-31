@@ -147,7 +147,18 @@ abstract class RemoteDataSource {
 
   Future<String> stripePayment(Uri uri, StripePaymentStateModel body);
 // //payment end
+  // ===== Offer Coupons =====
+  Future getOfferCoupons(String langCode);
+
+  Future getOfferCouponDetails(String id, String langCode);
+
+  Future getTrendingOfferCoupons(String langCode);
+
+  Future getSpecialOfferCoupons(String langCode);
+
+  Future getOfferCouponsByCategory(String categoryId, String langCode);
 }
+
 
 typedef CallClientMethod = Future<http.Response> Function();
 
@@ -943,6 +954,7 @@ class RemoteDataSourceImpl extends RemoteDataSource {
     return responseJsonBody;
   }
 
+
 // @override
 // Future getCheckOutInfo(String token) async {
 //   final uri = Uri.parse(RemoteUrls.checkOutUrl(token));
@@ -953,4 +965,58 @@ class RemoteDataSourceImpl extends RemoteDataSource {
 //
 //   return responseJsonBody;
 // }
+  // ===== Offer Coupons =====
+    // ===== Offer Coupons =====
+
+  @override
+  Future getOfferCoupons(String langCode) async {
+    final uri = Uri.parse(RemoteUrls.offerCoupons)
+        .replace(queryParameters: {'lang_code': langCode});
+    final clientMethod = client.get(uri, headers: headers);
+    final responseJsonBody =
+        await NetworkParser.callClientWithCatchException(() => clientMethod);
+    return responseJsonBody;
+  }
+
+  @override
+  Future getOfferCouponDetails(String id, String langCode) async {
+    final uri = Uri.parse(RemoteUrls.offerCouponDetails(id))
+        .replace(queryParameters: {'lang_code': langCode});
+    final clientMethod = client.get(uri, headers: headers);
+    final responseJsonBody =
+        await NetworkParser.callClientWithCatchException(() => clientMethod);
+    return responseJsonBody;
+  }
+
+  @override
+  Future getTrendingOfferCoupons(String langCode) async {
+    final uri = Uri.parse(RemoteUrls.offerCouponsTrending)
+        .replace(queryParameters: {'lang_code': langCode});
+    final clientMethod = client.get(uri, headers: headers);
+    final responseJsonBody =
+        await NetworkParser.callClientWithCatchException(() => clientMethod);
+    return responseJsonBody;
+  }
+
+  @override
+  Future getSpecialOfferCoupons(String langCode) async {
+    final uri = Uri.parse(RemoteUrls.offerCouponsSpecial)
+        .replace(queryParameters: {'lang_code': langCode});
+    final clientMethod = client.get(uri, headers: headers);
+    final responseJsonBody =
+        await NetworkParser.callClientWithCatchException(() => clientMethod);
+    return responseJsonBody;
+  }
+
+  @override
+  Future getOfferCouponsByCategory(String categoryId, String langCode) async {
+    final uri = Uri.parse(RemoteUrls.offerCouponsByCategory(categoryId))
+        .replace(queryParameters: {'lang_code': langCode});
+    final clientMethod = client.get(uri, headers: headers);
+    final responseJsonBody =
+        await NetworkParser.callClientWithCatchException(() => clientMethod);
+    return responseJsonBody;
+  }
+
 }
+

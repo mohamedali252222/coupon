@@ -191,4 +191,20 @@ class RemoteUrls {
 
 static const String fileUrl = "https://alasmart.mamunuiux.com/";
 static imageUrl(String imageUrl) => fileUrl + imageUrl;
+
+  // ===== Offer Coupons APIs =====
+  static const String offerCoupons = '${baseUrl}offer-coupons';
+
+  static String offerCouponDetails(String id) =>
+      '${baseUrl}offer-coupons/$id';
+
+  static const String offerCouponsTrending =
+      '${baseUrl}offer-coupons/trending';
+
+  static const String offerCouponsSpecial =
+      '${baseUrl}offer-coupons/special';
+
+  static String offerCouponsByCategory(String categoryId) =>
+      '${baseUrl}offer-coupons/category/$categoryId';
+      
 }
