@@ -20,7 +20,7 @@ class OfferCouponsSection extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.all(16),
             child: Text(
-              'حصل خطأ أثناء تحميل الكوبونات',
+              state.error ?? 'حصل خطأ أثناء تحميل الكوبونات',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
           );
