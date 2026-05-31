@@ -1,4 +1,5 @@
 import 'package:alas_mart/logic/cubit/currency/currency_cubit.dart';
+import 'package:alas_mart/logic/cubit/offer_coupons/offer_coupons_cubit.dart';
 import 'package:http/http.dart';
 
 import 'logic/cubit/change_password/change_password_cubit.dart';
@@ -301,6 +302,11 @@ class StateInjector {
         paymentRepository: context.read(),
         loginBloc: context.read(),
       ),
+    ),
+    BlocProvider<OfferCouponsCubit>(
+      create: (context) => OfferCouponsCubit(
+        remoteDataSource: context.read<RemoteDataSource>(),
+      )..fetchOfferCoupons('ar'),
     ),
   ];
 }
