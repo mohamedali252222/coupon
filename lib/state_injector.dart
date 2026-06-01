@@ -306,6 +306,7 @@ class StateInjector {
     BlocProvider<OfferCouponsCubit>(
       create: (context) => OfferCouponsCubit(
         remoteDataSource: context.read<RemoteDataSource>(),
+        loginBloc: context.read<LoginBloc>(),
       )..fetchOfferCoupons('ar'),
     ),
   ];

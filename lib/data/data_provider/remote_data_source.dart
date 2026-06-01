@@ -148,7 +148,7 @@ abstract class RemoteDataSource {
   Future<String> stripePayment(Uri uri, StripePaymentStateModel body);
 // //payment end
   // ===== Offer Coupons =====
-  Future getOfferCoupons(String langCode);
+  Future getOfferCoupons(String token, String langCode);
 
   Future getOfferCouponDetails(String id, String langCode);
 
@@ -969,9 +969,12 @@ class RemoteDataSourceImpl extends RemoteDataSource {
     // ===== Offer Coupons =====
 
   @override
-  Future getOfferCoupons(String langCode) async {
+  Future getOfferCoupons(String token, String langCode) async {
     final uri = Uri.parse(RemoteUrls.offerCoupons)
-        .replace(queryParameters: {'lang_code': langCode});
+        .replace(queryParameters: {
+      'token': token,
+      'lang_code': langCode,
+    });
     final clientMethod = client.get(uri, headers: headers);
     final responseJsonBody =
         await NetworkParser.callClientWithCatchException(() => clientMethod);
