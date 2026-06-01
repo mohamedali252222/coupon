@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/foundation.dart';
 
 import '../../../data/data_provider/remote_data_source.dart';
 import '../../../data/models/offer_coupon/offer_coupon_model.dart';
