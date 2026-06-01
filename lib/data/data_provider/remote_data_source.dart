@@ -975,9 +975,19 @@ class RemoteDataSourceImpl extends RemoteDataSource {
       'token': token,
       'lang_code': langCode,
     });
-    final clientMethod = client.get(uri, headers: headers);
+
+    print('offer-coupons HTTP request:');
+    print('  token: $token');
+    print('  uri: $uri');
+
+    final response = await client.get(uri, headers: headers);
+
+    print('offer-coupons HTTP response:');
+    print('  statusCode: ${response.statusCode}');
+    print('  body: ${response.body}');
+
     final responseJsonBody =
-        await NetworkParser.callClientWithCatchException(() => clientMethod);
+        await NetworkParser.callClientWithCatchException(() => response);
     return responseJsonBody;
   }
 
