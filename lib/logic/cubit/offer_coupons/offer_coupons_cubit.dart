@@ -18,6 +18,10 @@ class OfferCouponsCubit extends Cubit<OfferCouponsState> {
     emit(state.copyWith(loading: true, error: null));
 
     // Check if user is logged in
+    final token = loginBloc.userInformation?.accessToken;
+    debugPrint('offer-coupons: userInformation is null: ${loginBloc.userInformation == null}');
+    debugPrint('offer-coupons: token is null: ${token == null}');
+    debugPrint('offer-coupons: token is empty: ${token?.isEmpty ?? true}');
     if (loginBloc.userInformation == null || 
         loginBloc.userInformation!.accessToken == null ||
         loginBloc.userInformation!.accessToken!.isEmpty) {
@@ -41,6 +45,7 @@ class OfferCouponsCubit extends Cubit<OfferCouponsState> {
 
       emit(state.copyWith(loading: false, coupons: list));
     } catch (e) {
+      debugPrint('offer-coupons error: $e');
       emit(state.copyWith(
         loading: false,
         error: e.toString(),

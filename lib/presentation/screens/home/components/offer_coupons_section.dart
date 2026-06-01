@@ -20,9 +20,7 @@ class OfferCouponsSection extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.all(16),
             child: Text(
-              state.error == 'يجب تسجيل الدخول لعرض الكوبونات'
-                  ? 'يجب تسجيل الدخول لعرض الكوبونات'
-                  : 'تعذر تحميل الكوبونات حاليًا',
+              state.error!,
               style: Theme.of(context).textTheme.bodyMedium,
             ),
           );
