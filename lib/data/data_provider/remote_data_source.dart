@@ -987,7 +987,7 @@ class RemoteDataSourceImpl extends RemoteDataSource {
     print('  body: ${response.body}');
 
     final responseJsonBody =
-        await NetworkParser.callClientWithCatchException(() => response);
+        await NetworkParser.callClientWithCatchException(() async => response);
     return responseJsonBody;
   }
 
